@@ -1,0 +1,8 @@
+#gamecanvas {
+    max-width: 800px;
+    width: 100%;
+}
+
+main {
+    background-color: black;
+}
