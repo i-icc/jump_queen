@@ -5,4 +5,21 @@
 
 main {
     background-color: black;
+    user-select: none;
+}
+
+.smart {
+    display: flex;
+}
+
+.smart-btn {
+    background-color: cornsilk;
+    margin: 0.25rem;
+    font-size: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+    .smart {
+        display: none;
+    }
 }
