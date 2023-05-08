@@ -13,6 +13,37 @@ const ctx = canvas.getContext("2d");
 let keyLeft = false;
 let keyRight = false;
 let keyJump = false;
+
+// スマホ操作
+const touchAreaJ = document.getElementById("touch-area-J")
+const touchAreaR = document.getElementById("touch-area-R")
+const touchAreaL = document.getElementById("touch-area-L")
+document.addEventListener("touchstart", () => { startIndex += 1; });
+touchAreaJ.addEventListener("touchstart", event => {
+  event.code = "KeyJ";
+  keydownEvent(event);
+});
+touchAreaJ.addEventListener("touchend", event => {
+  event.code = "KeyJ";
+  keyupEvent(event);
+});
+touchAreaR.addEventListener("touchstart", event => {
+  event.code = "KeyD";
+  keydownEvent(event);
+});
+touchAreaR.addEventListener("touchend", event => {
+  event.code = "KeyD";
+  keyupEvent(event);
+});
+touchAreaL.addEventListener("touchstart", event => {
+  event.code = "KeyA";
+  keydownEvent(event);
+});
+touchAreaL.addEventListener("touchend", event => {
+  event.code = "KeyA";
+  keyupEvent(event);
+});
+// PC操作
 document.addEventListener("keypress", event => { if (event.code === "Space") startIndex += 1; }, false);
 document.addEventListener("keydown", keydownEvent, false);
 document.addEventListener("keyup", keyupEvent, false);
